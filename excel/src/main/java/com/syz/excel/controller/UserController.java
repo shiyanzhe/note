@@ -21,6 +21,8 @@ public class UserController {
 	@RequestMapping("/user")
 	@ResponseBody
 	public void getAllUser(HttpServletResponse response) {
+		
+		//查询数据库
 		List<User> findAllUser = userService.findAllUser();
 		DownExcel<User> ee= new DownExcel<User>();  
         String[] headers = {"姓名", "年龄" };  
